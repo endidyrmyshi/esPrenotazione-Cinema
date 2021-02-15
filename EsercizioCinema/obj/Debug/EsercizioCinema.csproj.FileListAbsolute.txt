@@ -1,0 +1,15 @@
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\bin\Debug\EsercizioCinema.exe.config
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\bin\Debug\EsercizioCinema.exe
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\bin\Debug\EsercizioCinema.pdb
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.csprojAssemblyReference.cache
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\MainWindow.g.cs
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\App.g.cs
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema_MarkupCompile.cache
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema_MarkupCompile.lref
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\MainWindow.baml
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.g.resources
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.Properties.Resources.resources
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.csproj.GenerateResource.cache
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.csproj.CoreCompileInputs.cache
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.exe
+C:\Users\Endi\Desktop\esPrenotazione-Cinema\EsercizioCinema\obj\Debug\EsercizioCinema.pdb
