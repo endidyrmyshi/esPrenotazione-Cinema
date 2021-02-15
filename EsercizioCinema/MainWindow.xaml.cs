@@ -22,8 +22,18 @@ namespace EsercizioCinema
     {
         public MainWindow()
         {
+
             
+
         }
 
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Button button1 = e.Source as Button;
+            
+            button1.Background = Brushes.Red;
+            button1.IsEnabled = false;
+
+        }
     }
 }
