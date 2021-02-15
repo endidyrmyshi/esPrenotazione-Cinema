@@ -8,16 +8,25 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image Margin="10" Source="postiCinema.jpg" Stretch="Fill"/>
-        <Button x:Name="button5" Content="Posto5" HorizontalAlignment="Left" Height="45" Margin="61,340,0,0" VerticalAlignment="Top" Width="89" RenderTransformOrigin="0.302,0.557"/>
-        <Button x:Name="button6" Content="Posto6" HorizontalAlignment="Left" Height="45" Margin="181,340,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button7" Content="Posto7" HorizontalAlignment="Left" Height="45" Margin="306,340,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button8" Content="Posto8" HorizontalAlignment="Left" Height="45" Margin="428,340,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button9" Content="Posto9" HorizontalAlignment="Left" Height="45" Margin="544,340,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button1" Content="Posto1" HorizontalAlignment="Left" Height="31" Margin="148,278,0,0" VerticalAlignment="Top" Width="87" RenderTransformOrigin="0.588,-0.341" Click="button1_Click"/>
-        <Button x:Name="button2" Content="Posto2" HorizontalAlignment="Left" Height="31" Margin="288,276,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button3" Content="Posto3" HorizontalAlignment="Left" Height="31" Margin="446,278,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button4" Content="Posto4" HorizontalAlignment="Left" Height="36" Margin="588,276,0,0" VerticalAlignment="Top" Width="87"/>
-        <Button x:Name="button10" Content="Posto10" HorizontalAlignment="Left" Height="45" Margin="667,340,0,0" VerticalAlignment="Top" Width="87"/>
+        <Button x:Name="btnSvuotaCinema" Content="Svuota Cinema" HorizontalAlignment="Left" Height="110" Margin="29,113,0,0" VerticalAlignment="Top" Width="121" Click="btnSvuotaCinema_Click"/>
+        <Ellipse x:Name="posto1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="44" Margin="103,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="65"/>
+        <Ellipse x:Name="posto2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="47" Margin="212,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="54"/>
+        <Ellipse x:Name="posto3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="49" Margin="330,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="63"/>
+        <Ellipse x:Name="posto4" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="466,265,0,0" Stroke="Black" VerticalAlignment="Top" Width="58"/>
+        <Ellipse x:Name="posto5" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="593,265,0,0" Stroke="Black" VerticalAlignment="Top" Width="56"/>
+        <Ellipse x:Name="posto6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="168,337,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
+        <Ellipse x:Name="posto7" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="49" Margin="308,339,0,0" Stroke="Black" VerticalAlignment="Top" Width="56" RenderTransformOrigin="2.122,1.26"/>
+        <Ellipse x:Name="posto8" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="49" Margin="433,339,0,0" Stroke="Black" VerticalAlignment="Top" Width="56"/>
+        <Ellipse x:Name="posto9" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="556,337,0,0" Stroke="Black" VerticalAlignment="Top" Width="65"/>
+        <Label Content="p1" HorizontalAlignment="Left" Height="34" Margin="123,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p2" HorizontalAlignment="Left" Height="34" Margin="229,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p3" HorizontalAlignment="Left" Height="34" Margin="350,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p4" HorizontalAlignment="Left" Height="34" Margin="482,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p5" HorizontalAlignment="Left" Height="34" Margin="610,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p6" HorizontalAlignment="Left" Height="34" Margin="185,339,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p7" HorizontalAlignment="Left" Height="36" Margin="330,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p8" HorizontalAlignment="Left" Height="34" Margin="448,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="p9" HorizontalAlignment="Left" Height="34" Margin="575,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
 
     </Grid>
 </Window>

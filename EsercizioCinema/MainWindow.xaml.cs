@@ -22,18 +22,30 @@ namespace EsercizioCinema
     {
         public MainWindow()
         {
-
-            
-
+            InitializeComponent();
+            posto1.Fill = System.Windows.Media.Brushes.Green;
+            posto2.Fill = System.Windows.Media.Brushes.Green;
+            posto3.Fill = System.Windows.Media.Brushes.Green;
+            posto4.Fill = System.Windows.Media.Brushes.Green;
+            posto5.Fill = System.Windows.Media.Brushes.Green;
+            posto6.Fill = System.Windows.Media.Brushes.Green;
+            posto7.Fill = System.Windows.Media.Brushes.Green;
+            posto8.Fill = System.Windows.Media.Brushes.Green;
+            posto9.Fill = System.Windows.Media.Brushes.Green;
+           
         }
 
-        private void button1_Click(object sender, RoutedEventArgs e)
+        private void btnSvuotaCinema_Click(object sender, RoutedEventArgs e)
         {
-            Button button1 = e.Source as Button;
-            
-            button1.Background = Brushes.Red;
-            button1.IsEnabled = false;
-
+            posto1.Fill = System.Windows.Media.Brushes.Green;
+            posto2.Fill = System.Windows.Media.Brushes.Green;
+            posto3.Fill = System.Windows.Media.Brushes.Green;
+            posto4.Fill = System.Windows.Media.Brushes.Green;
+            posto5.Fill = System.Windows.Media.Brushes.Green;
+            posto6.Fill = System.Windows.Media.Brushes.Green;
+            posto7.Fill = System.Windows.Media.Brushes.Green;
+            posto8.Fill = System.Windows.Media.Brushes.Green;
+            posto9.Fill = System.Windows.Media.Brushes.Green;
         }
     }
 }
