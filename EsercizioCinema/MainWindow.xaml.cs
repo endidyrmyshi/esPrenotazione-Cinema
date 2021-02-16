@@ -50,7 +50,15 @@ namespace EsercizioCinema
         }
 
 
+        private void btnCassa2_Click(object sender, RoutedEventArgs e)
+        {
+            Cassa2();
+        }
 
+        private void btnCassa1_Click(object sender, RoutedEventArgs e)
+        {
+            Cassa1();
+        }
         public void Cassa1()
         {
             int prenotazioneInput = int.Parse(txt1.Text);
@@ -64,10 +72,12 @@ namespace EsercizioCinema
                         {
                             posto1.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if(posto1.Fill== System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 2)
@@ -76,10 +86,12 @@ namespace EsercizioCinema
                         {
                             posto2.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto2.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 3)
@@ -88,10 +100,12 @@ namespace EsercizioCinema
                         {
                             posto3.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto3.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 4)
@@ -100,10 +114,12 @@ namespace EsercizioCinema
                         {
                             posto4.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto4.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 5)
@@ -112,10 +128,12 @@ namespace EsercizioCinema
                         {
                             posto5.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto5.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 6)
@@ -124,10 +142,12 @@ namespace EsercizioCinema
                         {
                             posto6.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto6.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 7)
@@ -136,10 +156,12 @@ namespace EsercizioCinema
                         {
                             posto7.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto7.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 8)
@@ -148,10 +170,12 @@ namespace EsercizioCinema
                         {
                             posto8.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto8.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                     if (prenotazioneInput == 9)
@@ -160,16 +184,19 @@ namespace EsercizioCinema
                         {
                             posto9.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt1.Clear();
                         }
                         else if (posto9.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt1.Clear();
                         }
                     }
                 }
                 else
                 {
                     MessageBox.Show("Il numero del posto inserito non rientra nel range");
+                    txt1.Clear();
                 }
             }
         }
@@ -187,10 +214,12 @@ namespace EsercizioCinema
                         {
                             posto1.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto1.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 2)
@@ -199,10 +228,12 @@ namespace EsercizioCinema
                         {
                             posto2.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto2.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 3)
@@ -211,10 +242,12 @@ namespace EsercizioCinema
                         {
                             posto3.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto3.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 4)
@@ -223,10 +256,12 @@ namespace EsercizioCinema
                         {
                             posto4.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto4.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 5)
@@ -235,10 +270,12 @@ namespace EsercizioCinema
                         {
                             posto5.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto5.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 6)
@@ -247,10 +284,12 @@ namespace EsercizioCinema
                         {
                             posto6.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto6.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 7)
@@ -259,10 +298,12 @@ namespace EsercizioCinema
                         {
                             posto7.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto7.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 8)
@@ -271,10 +312,12 @@ namespace EsercizioCinema
                         {
                             posto8.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto8.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                     if (prenotazioneInput == 9)
@@ -283,30 +326,24 @@ namespace EsercizioCinema
                         {
                             posto9.Fill = System.Windows.Media.Brushes.Red;
                             MessageBox.Show("Il posto è stato prenotato");
+                            txt2.Clear();
                         }
                         else if (posto9.Fill == System.Windows.Media.Brushes.Red)
                         {
                             MessageBox.Show("Il posto è gia occupato");
+                            txt2.Clear();
                         }
                     }
                 }
                 else
                 {
                     MessageBox.Show("Il numero del posto inserito non rientra nel range");
+                    txt2.Clear();
                 }
             }
         }
 
      
-
-        private void btnCassa2_Click(object sender, RoutedEventArgs e)
-        {
-            Cassa2();
-        }
-
-        private void btnCassa1_Click(object sender, RoutedEventArgs e)
-        {
-            Cassa1();
-        }
+       
     }
 }
