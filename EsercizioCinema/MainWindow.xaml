@@ -8,7 +8,7 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Image Margin="10" Source="postiCinema.jpg" Stretch="Fill"/>
-        <Button x:Name="btnSvuotaCinema" Content="Svuota Cinema" HorizontalAlignment="Left" Height="42" Margin="319,60,0,0" VerticalAlignment="Top" Width="147" Click="btnSvuotaCinema_Click"/>
+        <Button x:Name="btnSvuotaCinema" Content="Svuota Cinema" HorizontalAlignment="Left" Height="34" Margin="657,174,0,0" VerticalAlignment="Top" Width="99" Click="btnSvuotaCinema_Click"/>
         <Ellipse x:Name="posto1" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="44" Margin="103,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="65"/>
         <Ellipse x:Name="posto2" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="47" Margin="212,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="54"/>
         <Ellipse x:Name="posto3" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="49" Margin="330,267,0,0" Stroke="Black" VerticalAlignment="Top" Width="63"/>
@@ -17,22 +17,33 @@
         <Ellipse x:Name="posto6" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="168,337,0,0" Stroke="Black" VerticalAlignment="Top" Width="60"/>
         <Ellipse x:Name="posto7" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="49" Margin="308,339,0,0" Stroke="Black" VerticalAlignment="Top" Width="56" RenderTransformOrigin="2.122,1.26"/>
         <Ellipse x:Name="posto8" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="49" Margin="433,339,0,0" Stroke="Black" VerticalAlignment="Top" Width="56"/>
-        <Ellipse x:Name="posto9" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="556,337,0,0" Stroke="Black" VerticalAlignment="Top" Width="65"/>
-        <Label Content="p1" HorizontalAlignment="Left" Height="34" Margin="123,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p2" HorizontalAlignment="Left" Height="34" Margin="229,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p3" HorizontalAlignment="Left" Height="34" Margin="350,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p4" HorizontalAlignment="Left" Height="34" Margin="482,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p5" HorizontalAlignment="Left" Height="34" Margin="610,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p6" HorizontalAlignment="Left" Height="34" Margin="185,339,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p7" HorizontalAlignment="Left" Height="36" Margin="330,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p8" HorizontalAlignment="Left" Height="34" Margin="448,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <Label Content="p9" HorizontalAlignment="Left" Height="34" Margin="575,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
-        <TextBox HorizontalAlignment="Left" Height="26" Margin="39,93,0,0" TextWrapping="Wrap" Text="N. Posto:" VerticalAlignment="Top" Width="99" IsEnabled="False"/>
-        <TextBox HorizontalAlignment="Left" Height="21" Margin="657,93,0,0" TextWrapping="Wrap" Text="N. Posto:" VerticalAlignment="Top" Width="99" IsEnabled="False"/>
-        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="42" Margin="39,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.515,0.143"/>
-        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="42" Margin="657,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
+        <Ellipse x:Name="posto9" Fill="#FFF4F4F5" HorizontalAlignment="Left" Height="51" Margin="556,337,0,0" Stroke="Black" VerticalAlignment="Top" Width="58"/>
+        <Label Content="1" HorizontalAlignment="Left" Height="34" Margin="123,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="2" HorizontalAlignment="Left" Height="34" Margin="229,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="3" HorizontalAlignment="Left" Height="34" Margin="350,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="4" HorizontalAlignment="Left" Height="34" Margin="482,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="5" HorizontalAlignment="Left" Height="34" Margin="610,277,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="6" HorizontalAlignment="Left" Height="34" Margin="185,339,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="7" HorizontalAlignment="Left" Height="36" Margin="330,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="8" HorizontalAlignment="Left" Height="34" Margin="448,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <Label Content="9" HorizontalAlignment="Left" Height="34" Margin="575,352,0,0" VerticalAlignment="Top" Width="27" RenderTransformOrigin="0.719,2.328"/>
+        <TextBox HorizontalAlignment="Left" Height="21" Margin="39,93,0,0" TextWrapping="Wrap" Text="N. Posto:" VerticalAlignment="Top" Width="99" IsEnabled="False"/>
+        <TextBox HorizontalAlignment="Left" Height="16" Margin="657,93,0,0" TextWrapping="Wrap" Text="N. Posto:" VerticalAlignment="Top" Width="99" IsEnabled="False"/>
+        <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="42" Margin="39,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.515,0.143"/>
+        <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="42" Margin="657,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
         <Button x:Name="btnCassa2" Content="CASSA 2" HorizontalAlignment="Left" Height="33" Margin="657,60,0,0" VerticalAlignment="Top" Width="99" Click="btnCassa2_Click"/>
         <Button x:Name="btnCassa1" Content="CASSA 1" HorizontalAlignment="Left" Height="33" Margin="39,60,0,0" VerticalAlignment="Top" Width="99" Click="btnCassa1_Click"/>
+        <Label x:Name="lblSchemo" HorizontalAlignment="Left" Height="36" Margin="262,127,0,0" VerticalAlignment="Top" Width="285" FontStyle="Italic" FontWeight="Bold" FontSize="18" Content="  Sedetevi ai vostri posti,grazie!"/>
+        <Label x:Name="LblVisione" Content="Il film inizierà a breve..." HorizontalAlignment="Left" Height="38" Margin="288,156,0,0" VerticalAlignment="Top" Width="232" FontSize="20" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontStyle="Italic">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.326"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
 
     </Grid>
 </Window>

@@ -24,6 +24,8 @@ namespace EsercizioCinema
         public MainWindow()
         {
             InitializeComponent();
+            LblVisione.Visibility = Visibility.Hidden;
+            lblSchemo.Visibility = Visibility.Visible;
             posto1.Fill = System.Windows.Media.Brushes.Green;
             posto2.Fill = System.Windows.Media.Brushes.Green;
             posto3.Fill = System.Windows.Media.Brushes.Green;
@@ -35,20 +37,6 @@ namespace EsercizioCinema
             posto9.Fill = System.Windows.Media.Brushes.Green;
            
         }
-
-        private void btnSvuotaCinema_Click(object sender, RoutedEventArgs e)
-        {
-            posto1.Fill = System.Windows.Media.Brushes.Green;
-            posto2.Fill = System.Windows.Media.Brushes.Green;
-            posto3.Fill = System.Windows.Media.Brushes.Green;
-            posto4.Fill = System.Windows.Media.Brushes.Green;
-            posto5.Fill = System.Windows.Media.Brushes.Green;
-            posto6.Fill = System.Windows.Media.Brushes.Green;
-            posto7.Fill = System.Windows.Media.Brushes.Green;
-            posto8.Fill = System.Windows.Media.Brushes.Green;
-            posto9.Fill = System.Windows.Media.Brushes.Green;
-        }
-
 
         private void btnCassa2_Click(object sender, RoutedEventArgs e)
         {
@@ -62,6 +50,7 @@ namespace EsercizioCinema
         public void Cassa1()
         {
             int prenotazioneInput = int.Parse(txt1.Text);
+            
             lock (x)
             {
                 if (prenotazioneInput == 1 || prenotazioneInput == 2 || prenotazioneInput == 3 || prenotazioneInput == 4 || prenotazioneInput == 5 || prenotazioneInput == 6 || prenotazioneInput == 7 || prenotazioneInput == 8 || prenotazioneInput == 9)
@@ -198,11 +187,16 @@ namespace EsercizioCinema
                     MessageBox.Show("Il numero del posto inserito non rientra nel range");
                     txt1.Clear();
                 }
+                CambiaScritta();
             }
         }
         public void Cassa2()
         {
-            int prenotazioneInput = int.Parse(txt2.Text);
+            int prenotazioneInput;
+            
+            prenotazioneInput = int.Parse(txt2.Text);
+            
+            
             //stessi comandi per cassa2
             lock (x)
             {
@@ -335,15 +329,45 @@ namespace EsercizioCinema
                         }
                     }
                 }
+                
                 else
                 {
                     MessageBox.Show("Il numero del posto inserito non rientra nel range");
                     txt2.Clear();
                 }
             }
+            CambiaScritta();
         }
 
-     
-       
+        private void btnSvuotaCinema_Click(object sender, RoutedEventArgs e)
+        {
+            LblVisione.Visibility = Visibility.Hidden;
+            lblSchemo.Visibility = Visibility.Visible;
+            posto1.Fill = System.Windows.Media.Brushes.Green;
+            posto2.Fill = System.Windows.Media.Brushes.Green;
+            posto3.Fill = System.Windows.Media.Brushes.Green;
+            posto4.Fill = System.Windows.Media.Brushes.Green;
+            posto5.Fill = System.Windows.Media.Brushes.Green;
+            posto6.Fill = System.Windows.Media.Brushes.Green;
+            posto7.Fill = System.Windows.Media.Brushes.Green;
+            posto8.Fill = System.Windows.Media.Brushes.Green;
+            posto9.Fill = System.Windows.Media.Brushes.Green;
+            
+        }
+        public void CambiaScritta()
+        {
+            
+            if(posto1.Fill==System.Windows.Media.Brushes.Red&& posto2.Fill == System.Windows.Media.Brushes.Red && posto3.Fill==System.Windows.Media.Brushes.Red&&posto4.Fill== System.Windows.Media.Brushes.Red&& posto5.Fill==System.Windows.Media.Brushes.Red&&posto6.Fill==System.Windows.Media.Brushes.Red&&posto7.Fill==System.Windows.Media.Brushes.Red && posto8.Fill==System.Windows.Media.Brushes.Red && posto9.Fill == System.Windows.Media.Brushes.Red)
+            {
+                MessageBox.Show("La sala è al completo,non c'è più posto!");
+                lblSchemo.Visibility = Visibility.Hidden;
+                LblVisione.Visibility = Visibility.Visible;
+               
+            }
+            
+        }
+
+
+
     }
 }
