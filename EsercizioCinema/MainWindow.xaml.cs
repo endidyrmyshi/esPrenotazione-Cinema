@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Threading;
 
 namespace EsercizioCinema
 {
@@ -21,11 +22,17 @@ namespace EsercizioCinema
     public partial class MainWindow : Window
     {
         private static object x = new object();
+        Thread t1;
+        Thread t2;
+
+        int prenotazioneInput = 0;
+       
+       
+
         public MainWindow()
         {
             InitializeComponent();
-            LblVisione.Visibility = Visibility.Hidden;
-            lblSchemo.Visibility = Visibility.Visible;
+           
             posto1.Fill = System.Windows.Media.Brushes.Green;
             posto2.Fill = System.Windows.Media.Brushes.Green;
             posto3.Fill = System.Windows.Media.Brushes.Green;
@@ -35,313 +42,478 @@ namespace EsercizioCinema
             posto7.Fill = System.Windows.Media.Brushes.Green;
             posto8.Fill = System.Windows.Media.Brushes.Green;
             posto9.Fill = System.Windows.Media.Brushes.Green;
-           
+
+       
         }
 
         private void btnCassa2_Click(object sender, RoutedEventArgs e)
         {
-            Cassa2();
+            prenotazioneInput = int.Parse(txt2.Text);
+            t2 = new Thread(new ThreadStart(Cassa2));
+            
+            t2.Start();
+          
         }
 
         private void btnCassa1_Click(object sender, RoutedEventArgs e)
         {
-            Cassa1();
+            prenotazioneInput = int.Parse(txt1.Text);
+            t1 = new Thread(new ThreadStart(Cassa1));
+            t1.Start();
+
         }
         public void Cassa1()
         {
-            int prenotazioneInput = int.Parse(txt1.Text);
-            
+           
             lock (x)
             {
-                if (prenotazioneInput == 1 || prenotazioneInput == 2 || prenotazioneInput == 3 || prenotazioneInput == 4 || prenotazioneInput == 5 || prenotazioneInput == 6 || prenotazioneInput == 7 || prenotazioneInput == 8 || prenotazioneInput == 9)
+                if (prenotazioneInput == 1 || prenotazioneInput == 2 || prenotazioneInput == 3 || prenotazioneInput == 4 || prenotazioneInput == 5 || prenotazioneInput == 6 || prenotazioneInput == 7 || prenotazioneInput == 8 || prenotazioneInput==9)
                 {
-                    if (prenotazioneInput == 1)
+                    switch (prenotazioneInput)
                     {
-                        if(posto1.Fill== System.Windows.Media.Brushes.Green)
-                        {
-                            posto1.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if(posto1.Fill== System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
+                        case 1:
+                            {
+                                if (prenotazioneInput == 1)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto1.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto1.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto1.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+
+
+
+                        case 2:
+                            {
+                                if (prenotazioneInput == 2)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto2.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto2.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto2.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 3:
+                            {
+                                if (prenotazioneInput == 3)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto3.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto3.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto3.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 4:
+                            {
+                                if (prenotazioneInput == 4)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto4.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto4.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto4.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 5:
+                            {
+                                if (prenotazioneInput == 5)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto5.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto5.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto5.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 6:
+                            {
+                                if (prenotazioneInput == 6)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto6.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto6.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto6.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 7:
+                            {
+                                if (prenotazioneInput == 7)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto7.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto7.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto7.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 8:
+                            {
+                                if (prenotazioneInput == 8)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto8.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto8.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto8.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 9:
+                            {
+                                if (prenotazioneInput == 9)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto9.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto9.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt1.Clear();
+                                        }
+                                        else if (posto9.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt1.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+
                     }
-                    if (prenotazioneInput == 2)
-                    {
-                        if (posto2.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto2.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto2.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 3)
-                    {
-                        if (posto3.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto3.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto3.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 4)
-                    {
-                        if (posto4.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto4.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto4.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 5)
-                    {
-                        if (posto5.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto5.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto5.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 6)
-                    {
-                        if (posto6.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto6.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto6.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 7)
-                    {
-                        if (posto7.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto7.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto7.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 8)
-                    {
-                        if (posto8.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto8.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto8.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 9)
-                    {
-                        if (posto9.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto9.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt1.Clear();
-                        }
-                        else if (posto9.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt1.Clear();
-                        }
-                    }
+                    
                 }
                 else
                 {
-                    MessageBox.Show("Il numero del posto inserito non rientra nel range");
+                    MessageBox.Show("Il numero nesiderato nonn rientra nel range");
                     txt1.Clear();
                 }
-                CambiaScritta();
+
             }
         }
         public void Cassa2()
         {
-            int prenotazioneInput;
+
+            //stessi comandi di cassa1
             
-            prenotazioneInput = int.Parse(txt2.Text);
-            
-            
-            //stessi comandi per cassa2
             lock (x)
             {
                 if (prenotazioneInput == 1 || prenotazioneInput == 2 || prenotazioneInput == 3 || prenotazioneInput == 4 || prenotazioneInput == 5 || prenotazioneInput == 6 || prenotazioneInput == 7 || prenotazioneInput == 8 || prenotazioneInput == 9)
                 {
-                    if (prenotazioneInput == 1)
+                    switch (prenotazioneInput)
                     {
-                        if (posto1.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto1.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto1.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
+                        case 1:
+                            {
+                                if (prenotazioneInput == 1)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto1.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto1.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto1.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+
+
+
+                        case 2:
+                            {
+                                if (prenotazioneInput == 2)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto2.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto2.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto2.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 3:
+                            {
+                                if (prenotazioneInput == 3)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto3.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto3.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto3.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 4:
+                            {
+                                if (prenotazioneInput == 4)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto4.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto4.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto4.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 5:
+                            {
+                                if (prenotazioneInput == 5)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto5.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto5.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto5.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 6:
+                            {
+                                if (prenotazioneInput == 6)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto6.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto6.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto6.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 7:
+                            {
+                                if (prenotazioneInput == 7)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto7.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto7.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto7.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 8:
+                            {
+                                if (prenotazioneInput == 8)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto8.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto8.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto8.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+                        case 9:
+                            {
+                                if (prenotazioneInput == 9)
+                                {
+
+                                    this.Dispatcher.BeginInvoke(new Action(() =>
+                                    {
+                                        if (posto9.Fill == System.Windows.Media.Brushes.Green)
+                                        {
+                                            posto9.Fill = System.Windows.Media.Brushes.Red;
+                                            MessageBox.Show("Il posto è stato prenotato");
+                                            txt2.Clear();
+                                        }
+                                        else if (posto9.Fill == System.Windows.Media.Brushes.Red)
+                                        {
+                                            MessageBox.Show("Il posto è gia occupato");
+                                            txt2.Clear();
+                                        }
+                                    }));
+                                }
+                                break;
+                            }
+
                     }
-                    if (prenotazioneInput == 2)
-                    {
-                        if (posto2.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto2.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto2.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 3)
-                    {
-                        if (posto3.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto3.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto3.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 4)
-                    {
-                        if (posto4.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto4.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto4.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 5)
-                    {
-                        if (posto5.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto5.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto5.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 6)
-                    {
-                        if (posto6.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto6.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto6.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 7)
-                    {
-                        if (posto7.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto7.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto7.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 8)
-                    {
-                        if (posto8.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto8.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto8.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
-                    if (prenotazioneInput == 9)
-                    {
-                        if (posto9.Fill == System.Windows.Media.Brushes.Green)
-                        {
-                            posto9.Fill = System.Windows.Media.Brushes.Red;
-                            MessageBox.Show("Il posto è stato prenotato");
-                            txt2.Clear();
-                        }
-                        else if (posto9.Fill == System.Windows.Media.Brushes.Red)
-                        {
-                            MessageBox.Show("Il posto è gia occupato");
-                            txt2.Clear();
-                        }
-                    }
+                    
                 }
-                
                 else
                 {
-                    MessageBox.Show("Il numero del posto inserito non rientra nel range");
+                    MessageBox.Show("Il numero nesiderato nonn rientra nel range");
                     txt2.Clear();
                 }
+              
+
             }
-            CambiaScritta();
+            
         }
 
         private void btnSvuotaCinema_Click(object sender, RoutedEventArgs e)
         {
-            LblVisione.Visibility = Visibility.Hidden;
+            ;
             lblSchemo.Visibility = Visibility.Visible;
             posto1.Fill = System.Windows.Media.Brushes.Green;
             posto2.Fill = System.Windows.Media.Brushes.Green;
@@ -352,22 +524,8 @@ namespace EsercizioCinema
             posto7.Fill = System.Windows.Media.Brushes.Green;
             posto8.Fill = System.Windows.Media.Brushes.Green;
             posto9.Fill = System.Windows.Media.Brushes.Green;
-            
+
         }
-        public void CambiaScritta()
-        {
-            
-            if(posto1.Fill==System.Windows.Media.Brushes.Red&& posto2.Fill == System.Windows.Media.Brushes.Red && posto3.Fill==System.Windows.Media.Brushes.Red&&posto4.Fill== System.Windows.Media.Brushes.Red&& posto5.Fill==System.Windows.Media.Brushes.Red&&posto6.Fill==System.Windows.Media.Brushes.Red&&posto7.Fill==System.Windows.Media.Brushes.Red && posto8.Fill==System.Windows.Media.Brushes.Red && posto9.Fill == System.Windows.Media.Brushes.Red)
-            {
-                MessageBox.Show("La sala è al completo,non c'è più posto!");
-                lblSchemo.Visibility = Visibility.Hidden;
-                LblVisione.Visibility = Visibility.Visible;
-               
-            }
-            
-        }
-
-
-
+      
     }
 }

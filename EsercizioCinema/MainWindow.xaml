@@ -31,19 +31,9 @@
         <TextBox HorizontalAlignment="Left" Height="16" Margin="657,93,0,0" TextWrapping="Wrap" Text="N. Posto:" VerticalAlignment="Top" Width="99" IsEnabled="False"/>
         <TextBox x:Name="txt1" HorizontalAlignment="Left" Height="42" Margin="39,114,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99" RenderTransformOrigin="0.515,0.143"/>
         <TextBox x:Name="txt2" HorizontalAlignment="Left" Height="42" Margin="657,109,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="99"/>
-        <Button x:Name="btnCassa2" Content="CASSA 2" HorizontalAlignment="Left" Height="33" Margin="657,60,0,0" VerticalAlignment="Top" Width="99" Click="btnCassa2_Click"/>
-        <Button x:Name="btnCassa1" Content="CASSA 1" HorizontalAlignment="Left" Height="33" Margin="39,60,0,0" VerticalAlignment="Top" Width="99" Click="btnCassa1_Click"/>
-        <Label x:Name="lblSchemo" HorizontalAlignment="Left" Height="36" Margin="262,127,0,0" VerticalAlignment="Top" Width="285" FontStyle="Italic" FontWeight="Bold" FontSize="18" Content="  Sedetevi ai vostri posti,grazie!"/>
-        <Label x:Name="LblVisione" Content="Il film inizierà a breve..." HorizontalAlignment="Left" Height="38" Margin="288,156,0,0" VerticalAlignment="Top" Width="232" FontSize="20" RenderTransformOrigin="0.5,0.5" FontWeight="Bold" FontStyle="Italic">
-            <Label.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="0.326"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Label.RenderTransform>
-        </Label>
+        <Button x:Name="btnCassa2" Content="Prenota Cassa2" HorizontalAlignment="Left" Height="33" Margin="657,60,0,0" VerticalAlignment="Top" Width="99" Click="btnCassa2_Click"/>
+        <Button x:Name="btnCassa1" Content="Prenota Cassa1" HorizontalAlignment="Left" Height="33" Margin="39,60,0,0" VerticalAlignment="Top" Width="99" Click="btnCassa1_Click"/>
+        <Label x:Name="lblSchemo" HorizontalAlignment="Left" Height="36" Margin="282,132,0,0" VerticalAlignment="Top" Width="242" FontStyle="Italic" FontWeight="Bold" FontSize="18" Content="Il film inizierà a breve..."/>
 
     </Grid>
 </Window>
